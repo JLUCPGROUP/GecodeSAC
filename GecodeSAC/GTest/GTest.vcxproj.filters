@@ -27,9 +27,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BuildModel.h">
-      <Filter>XModel</Filter>
-    </ClInclude>
     <ClInclude Include="type_define.h">
       <Filter>XModel</Filter>
     </ClInclude>
@@ -39,9 +36,30 @@
     <ClInclude Include="XMLModel.h">
       <Filter>XModel</Filter>
     </ClInclude>
+    <ClInclude Include="GecodeModel.h">
+      <Filter>GModel</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildGecodeModel.h">
+      <Filter>GModel</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="BMPath.xml">
+      <Filter>资源文件</Filter>
+    </Xml>
+    <Xml Include="XMLFileNeg2.xml">
+      <Filter>资源文件</Filter>
+    </Xml>
+    <Xml Include="queens-4_ext.xml">
+      <Filter>资源文件</Filter>
+    </Xml>
+    <Xml Include="queens-12_ext.xml">
+      <Filter>资源文件</Filter>
+    </Xml>
+    <Xml Include="XMLFile.xml">
+      <Filter>资源文件</Filter>
+    </Xml>
+    <Xml Include="XMLFileNeg.xml">
       <Filter>资源文件</Filter>
     </Xml>
   </ItemGroup>
