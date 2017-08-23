@@ -14,6 +14,9 @@
     <Filter Include="GTest">
       <UniqueIdentifier>{092f4762-a1d1-436d-9c8d-7c6b91ad73b2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Algorithm">
+      <UniqueIdentifier>{2bc7b1ec-9c4e-40f7-8005-4f02f1e87273}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,6 +27,9 @@
     </ClCompile>
     <ClCompile Include="XMLModel.cpp">
       <Filter>XModel</Filter>
+    </ClCompile>
+    <ClCompile Include="SAC1.cpp">
+      <Filter>Algorithm</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -41,6 +47,9 @@
     </ClInclude>
     <ClInclude Include="BuildGecodeModel.h">
       <Filter>GModel</Filter>
+    </ClInclude>
+    <ClInclude Include="SAC1.h">
+      <Filter>Algorithm</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
