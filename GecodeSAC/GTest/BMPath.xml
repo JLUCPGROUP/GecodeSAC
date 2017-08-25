@@ -2,8 +2,8 @@
 <BenchMark>
   <BMFiles nbBMFiles = "1">
     <!--<BMFile id ="0">queens-4_ext.xml</BMFile>-->
-    <!--<BMFile id ="0">queens-12_ext.xml</BMFile>-->
-    <BMFile id ="0">G:/Projects/benchmarks/tightness0.35/rand-2-40-16-250-350-0_ext.xml</BMFile>
+    <BMFile id ="0">queens-12_ext.xml</BMFile>
+    <!--<BMFile id ="0">G:/Projects/benchmarks/tightness0.35/rand-2-40-16-250-350-0_ext.xml</BMFile>-->
     <!--<BMFile id ="0">G:/Projects/benchmarks/tightness0.1/tightness0.1/rand-2-40-8-753-100-0_ext.xml</BMFile>-->
     <!--<BMFile id ="0">XMLFileNeg2.xml</BMFile>-->
     <!--<BMFile id ="0">XMLFileNeg.xml</BMFile>-->
