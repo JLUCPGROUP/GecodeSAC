@@ -22,26 +22,11 @@
     <ClCompile Include="main.cpp">
       <Filter>GTest</Filter>
     </ClCompile>
-    <ClCompile Include="XMLBuilder.cpp">
-      <Filter>XModel</Filter>
-    </ClCompile>
-    <ClCompile Include="XMLModel.cpp">
-      <Filter>XModel</Filter>
-    </ClCompile>
     <ClCompile Include="SAC1.cpp">
       <Filter>Algorithm</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="type_define.h">
-      <Filter>XModel</Filter>
-    </ClInclude>
-    <ClInclude Include="XMLBuilder.h">
-      <Filter>XModel</Filter>
-    </ClInclude>
-    <ClInclude Include="XMLModel.h">
-      <Filter>XModel</Filter>
-    </ClInclude>
     <ClInclude Include="GecodeModel.h">
       <Filter>GModel</Filter>
     </ClInclude>
@@ -69,6 +54,9 @@
       <Filter>资源文件</Filter>
     </Xml>
     <Xml Include="XMLFileNeg.xml">
+      <Filter>资源文件</Filter>
+    </Xml>
+    <Xml Include="..\..\..\cuda8_sac\cuda8_sac\cuda8_sac\queens-12.xml">
       <Filter>资源文件</Filter>
     </Xml>
   </ItemGroup>
