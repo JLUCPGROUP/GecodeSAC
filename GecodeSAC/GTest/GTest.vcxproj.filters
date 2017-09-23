@@ -47,16 +47,16 @@
     <Xml Include="queens-4_ext.xml">
       <Filter>资源文件</Filter>
     </Xml>
-    <Xml Include="queens-12_ext.xml">
-      <Filter>资源文件</Filter>
-    </Xml>
     <Xml Include="XMLFile.xml">
       <Filter>资源文件</Filter>
     </Xml>
     <Xml Include="XMLFileNeg.xml">
       <Filter>资源文件</Filter>
     </Xml>
-    <Xml Include="..\..\..\cuda8_sac\cuda8_sac\cuda8_sac\queens-12.xml">
+    <Xml Include="queens-12.xml">
+      <Filter>资源文件</Filter>
+    </Xml>
+    <Xml Include="queens-12_ext.xml">
       <Filter>资源文件</Filter>
     </Xml>
   </ItemGroup>
