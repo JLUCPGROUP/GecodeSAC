@@ -93,7 +93,7 @@ XINTCon::XINTCon(const int id, const int rel_id, const int arity, const RelType 
 	:XCon(id, rel_id, arity, type, scope_str) {
 
 	int pas[50];
-	std::string s = pars;
+	std::string s(pars);
 	s += " ";
 	int startpos = 0;
 	int j = -1;
@@ -122,15 +122,14 @@ XINTCon::XINTCon(const int id, const int rel_id, const int arity, const RelType 
 }
 int XINTCon::GetParameters(const char* par_chr) {
 	int value;
-	std::string s = par_chr;
 
-	if (s[0] == 'V') {
-		sscanf_s(s.c_str(), "V%d", &value);
+	if (par_chr[0] == 'V') {
+		sscanf_s(par_chr, "V%d", &value);
 		value += MAX_VALUE;
 	}
-	else {
+	else
 		value = atoi(par_chr);
-	}
+
 	return value;
 }
 XINTCon::~XINTCon() {
@@ -184,8 +183,7 @@ int PStack::pop() {
 
 XPre::XPre(const int id, char * pas_chr, char * prs_chr) :id(id) {
 	int max_par_index;
-	std::string par_str;
-	par_str = pas_chr;
+	std::string par_str = pas_chr;
 	par_str = par_str.substr(par_str.rfind("X") + 1);
 	max_par_index = atoi(par_str.c_str());
 	++max_par_index;

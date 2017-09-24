@@ -7,6 +7,7 @@
 #include "SAC1.h"
 using namespace std;
 using namespace cudacp;
+using namespace cp::algorithm;
 
 const string X_PATH = "BMPath.xml";
 
@@ -20,45 +21,46 @@ int main() {
 	builder.GenerateModelFromXml(xmodel);
 	HModel* hmodel = new HModel();
 	HBuilder hbuilder(xmodel, hmodel);
+	delete xmodel;
+	//hbuilder.ShowHModel();
 	GecodeModel* gm = new GecodeModel;
 	BuildGecodeModel(hmodel, gm);
+	delete hmodel;
+	//////IntAFC afc(*gm, gm->vars_);
+	////branch(*gm, gm->vars_, INT_VAR_AFC_SIZE_MAX(0), INT_VAL_MIN());
+	branch(*gm, gm->vars_, INT_VAR_SIZE_MIN(), INT_VALUES_MIN());
+	//////branch(*gm, gm->vars_, INT_VAR_DEGREE_SIZE_MIN(), INT_VAL_MIN());
 
-	//IntAFC afc(*gm, gm->vars_);
-	branch(*gm, gm->vars_, INT_VAR_AFC_SIZE_MAX(0), INT_VAL_MIN());
-	//branch(*gm, gm->vars_, INT_VAR_SIZE_MIN(), INT_VALUES_MIN());
-	//branch(*gm, gm->vars_, INT_VAR_DEGREE_SIZE_MIN(), INT_VAL_MIN());
-
-	DFS<GecodeModel> ee(gm);
-	delete gm;
-	//int i = 0;
-	begin = clock();
-	//while (GecodeModel* ss = ee.next()) {
-	//	//ss->print();
-	//	++i;
+	//DFS<GecodeModel> ee(gm);
+	//delete gm;
+	//begin = clock();
+	//////int i = 0;
+	//////while (GecodeModel* ss = ee.next()) {
+	//////	//ss->print();
+	//////	++i;
+	//////	delete ss;
+	//////}
+	//if (GecodeModel* ss = ee.next()) {
+	//	ss->print();
+	//	cout << "nodes = " << ee.statistics().node << endl;
 	//	delete ss;
 	//}
-	if (GecodeModel* ss = ee.next()) {
-		ss->print();
-		cout << "nodes = " << ee.statistics().node << endl;
-		delete ss;
-	}
-	end = clock();
-	//cout << "|solutions| = " << i << endl;
-
-	//--------------------------------------------------------
-	//SAC_1 sac1(gm);
-	//begin = clock();
-	//gm->status();
-	//const Choice* ch = gm->choice();
-	//unsigned int n = ch->alternatives();
-	//ch->
-	//std::cout << "n = " << n << std::endl;
-	//sac1.enforce();
 	//end = clock();
-	//delete gm;
+	////cout << "|solutions| = " << i << endl;
 
-	delete hmodel;
-	delete xmodel;
+	//////--------------------------------------------------------
+	SAC_1 sac1(gm);
+	begin = clock();
+	//gm->status();
+	//////const Choice* ch = gm->choice();
+	//////unsigned int n = ch->alternatives();
+	//////ch->
+	//////std::cout << "n = " << n << std::endl;
+	sac1.enforce();
+	end = clock();
+	gm->print();
+	delete gm;
+
 	cout << "execute time = " << end - begin << endl;
 	cout << "---end---" << endl;
 	return 0;

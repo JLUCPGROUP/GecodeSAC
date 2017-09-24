@@ -223,7 +223,7 @@ void XBuilder::generateConstraints() {
 		node = nodes->item(i);
 		type = node->hasChildNodes() ? INT : EXT;
 		int arity = XMLString::parseInt(node->getAttributes()->getNamedItem(XMLString::transcode("arity"))->getTextContent());
-		char *scope_str = XMLString::transcode(node->getAttributes()->getNamedItem(XMLString::transcode("scope"))->getTextContent());
+		char* scope_str = XMLString::transcode(node->getAttributes()->getNamedItem(XMLString::transcode("scope"))->getTextContent());
 		char* rel_id_str = XMLString::transcode(node->getAttributes()->getNamedItem(XMLString::transcode("reference"))->getTextContent());
 		if (type == INT) {
 			sscanf_s(rel_id_str, "P%d", &rel_id);
